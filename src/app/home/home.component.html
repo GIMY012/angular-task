@@ -1,0 +1,33 @@
+
+<h1>دا اول يوم ليا اتعرف فيه علي الانجولر انا سيكل 43 وشكرا </h1>
+<h2>Customers Transaction Details</h2>
+<br>
+
+Search: <input type="text" placeholder="search by name  "  [(ngModel)]="nameFilter" (ngModelChange)="filterData()" >
+<br>
+Search: <input type="text" placeholder="search by amount  "   [(ngModel)]="amountFilter" (ngModelChange)="filterData()" >
+<br>
+<table id="transactions-amount">
+  <thead>
+    <tr >
+      <th>ID</th>
+      <th>Name</th>
+      <th>Transaction Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- to filter data -->
+   <!-- ng-Model="textSearch"  -->
+   <!-- |filter:textSearch -->
+ <!-- ng-repeat="customer in customers" -->
+  <!-- let customer of mergedData -->
+    <tr *ngFor="let customer of mergedData "   >
+      <td>{{ customer.id }}</td>
+      <td>{{ customer.name }}</td>
+      
+      <td>{{ customer.transactionAmount|| 'N/A' }}</td>
+    </tr>
+   
+  </tbody>
+</table>
+<br><br>
